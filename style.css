@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background: #060c21;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    background: #060c21;
+    box-sizing: border-box;
+    left: 0;
+    margin-left: 15px;
+    padding: 0 100px;
+    position: absolute;
+    top: 0;
+    width: 97%;
+    border-bottom: 5px solid #FFD700;
+}
+
+header .logo {
+    color: #fff;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    color: #fff;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background: #FFD700;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 14rem);
+    padding-top: 8rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 0 40px;
+    position: relative;
+}
+
+.container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+    border: 1px solid #000;
+    position: relative;
+    height: 300px;
+    margin: 0 20px;
+}
+
+.container .box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+}
+
+.container .box1:before {
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.container .box2:before {
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.container .box3:before {
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.container .box4:before {
+    background: linear-gradient(315deg, #ff0000, #ffc107);
+}
+
+.container .box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    padding: 20px;
+    transform: translateY(20px);
+}
+
+.box .content h2 {
+    position: absolute;
+    top: -50px;
+    right: -20px;
+    margin: 0;
+    padding: 0;
+    font-size: 10rem;
+    color: rgba(255, 255, 255, .05);
+    transition: 0.5s;
+}
+
+.box:hover .content h2 {
+    top: -70px;
+}
+
+.box .content h3 {
+    margin: 50px 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.box .content a {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+    text-decoration: none;
+    
+}
+
+.box:hover .content a {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.box:hover .content a:hover {
+    color: #000;
+    background: #FFD700;
+}
+
+/* FOOTER */
+
+footer{
+    border-top: 2px solid #FFD700;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: #060c21;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+footer .footer-triunfo {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer span {
+    color: #fff;
+}
+
+footer .social a {
+    margin-right: 5px;
+}
+
+@media (max-width: 480px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+    header nav {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+    }
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    footer {
+        font-size: 0.875rem;
+        margin-left: -15px;
+    }
+    footer .social {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 960px) {
+    section {
+        flex-wrap: wrap;
+    }
+
+    .container {
+        margin-bottom: 20px;
+    }
+
+}
