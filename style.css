@@ -48,13 +48,17 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
+main {
+    margin-bottom: 80px;
+    min-height: calc(100vh - 14rem);
+}
+
 /* CARDS */
 
 .cards {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 14rem);
   padding-top: 8rem;
 }
 
