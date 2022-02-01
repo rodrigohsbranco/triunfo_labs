@@ -258,6 +258,160 @@ footer .social a {
   color: #fff;
 }
 
+/* CONTATO */
+.about__about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  margin-top: 78px;
+  width: 100%;
+}
+
+.about__container {
+  position: relative;
+  /* z-index: 1000; */
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+
+}
+
+.about__container::before {
+  background: rgba(255, 255, 255, 0.05);
+  content: '';
+  height: 100%;
+  left: -40%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: skewX(-15deg);
+  width: 100%;
+}
+
+.about__container h2 {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.about__container .about__row100 {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.about__container .about__col {
+  position: relative;
+  width: 95%;
+  padding: 0 10px;
+  margin: 30px 0 20px;
+}
+
+.about__container .about__row100 .about__col .about__inputBox {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  color: #fff;
+}
+
+.about__textarea {
+  min-height: 80px;
+}
+
+.about__container .about__row100 .about__col .about__inputBox input,
+.about__container .about__row100 .about__col .about__inputBox textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 0.938rem;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+
+.about__container .about__row100 .about__col .about__inputBox .about__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 10px;
+  font-size: 1.125rem;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.about__container .about__row100 .about__col .about__inputBox input:focus + .about__text,
+.about__container .about__row100 .about__col .about__inputBox input:valid + .about__text,
+.about__container .about__row100 .about__col .about__inputBox textarea:focus + .about__text,
+.about__container .about__row100 .about__col .about__inputBox textarea:valid + .about__text {
+  top: -25px;
+  left: -10px;
+}
+
+.about__container .about__row100 .about__col .about__inputBox .about__line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.about__container .about__row100 .about__col .about__inputBox input:focus ~ .about__line,
+.about__container .about__row100 .about__col .about__inputBox input:valid ~ .about__line {
+  height: 100%;
+}
+
+.about__container .about__row100 .about__col .about__inputBox .about__textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.about__container .about__row100 .about__col .about__inputBox textarea:focus ~ .about__line,
+.about__container .about__row100 .about__col .about__inputBox textarea:valid ~ .about__line {
+  height: 100%;
+}
+
+.about__container .about__row100 .about__col input[type="submit"] {
+  background-color: #fcba03;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #222;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.about__container .about__row100 .about__col input[type="submit"]:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
 /* MEDIA QUERYS */
 
 @media (max-width: 480px) {
@@ -293,6 +447,9 @@ footer .social a {
     text-align: center;
     width: 300px !important;
   }
+  .about__about {
+    margin-top: 110px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -305,6 +462,9 @@ footer .social a {
   }
   .about-text {
     width: 450px;
+  }
+  .about__about {
+    margin-bottom: 0;
   }
 }
 
@@ -320,5 +480,8 @@ footer .social a {
   }
   .about img {
     width: 350px;
+  }
+  .about__about {
+    margin-bottom: 80px;
   }
 }
