@@ -25,6 +25,10 @@ header .logo {
   line-height: 50px;
 }
 
+header .logo img {
+  width: 100px;
+}
+
 header nav {
   float: right;
 }
@@ -188,6 +192,15 @@ footer {
   padding: 20px;
 }
 
+footer img {
+  width: 70px;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+}
+
 footer .footer-triunfo {
   color: #fff;
   text-decoration: none;
@@ -341,7 +354,7 @@ footer .social a {
 
 .about__contato {
   color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-decoration: none;
 }
 
@@ -462,6 +475,12 @@ footer .social a {
   .about__about {
     margin-top: 110px;
   }
+  .about__wpp-section {
+    width: 90%;
+  }
+  .about__wpp-section {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -477,6 +496,9 @@ footer .social a {
   }
   .about__about {
     margin-bottom: 0;
+  }
+  .about__wpp-section {
+    margin-bottom: 30px;
   }
 }
 
