@@ -378,7 +378,7 @@ footer .social a {
 
 .produto__card {
   position: relative;
-  max-width: 270px;
+  max-width: 230px;
   height: 215px;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 45px rgb(255 255 255 / 10%);
@@ -433,8 +433,12 @@ footer .social a {
 
 .produto__card:hover .produto__content {
   opacity: 1;
-  margin-top: -10px;
+  margin-top: -5px;
   transition-delay: 0.3s;
+}
+
+.produto__content p {
+  color: white;
 }
 
 /* MEDIA QUERYS */
